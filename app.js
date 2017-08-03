@@ -8,4 +8,4 @@ class Counter extends HTMLElement {
   }
 }
 
-customElements.define('counter', Counter);
+customElements.define('my-counter', Counter);
