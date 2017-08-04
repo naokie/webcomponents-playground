@@ -13,6 +13,15 @@ class Counter extends HTMLElement {
 
   render() {
     const template = `
+      <style>
+      button {
+        padding: 0.5em 1em;
+        border: none;
+        border-radius: 4px;
+        background-color: #000;
+        color: #fff;
+      }
+      </style>
       <div>${this._count}</div>
       <div>
         <button>+</button>
