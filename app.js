@@ -8,11 +8,24 @@ class Counter extends HTMLElement {
   connectedCallback() {
     console.log('connected');
 
+    this.render();
+  }
+
+  render() {
     const template = `
       <div>${this._count}</div>
+      <div>
+        <button>+</button>
+      </div>
     `;
 
     this.shadow.innerHTML = template;
+
+    const incrementButton = this.shadow.querySelector('button');
+    incrementButton.addEventListener('click', () => {
+      this._count += 1;
+      this.render();
+    });
   }
 }
 
