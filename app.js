@@ -1,7 +1,7 @@
 class Counter extends HTMLElement {
   constructor() {
     super();
-    this.shadow = this.attachShadow({ mode: 'open' });
+    this.attachShadow({ mode: 'open' });
     this._count = 0;
   }
 
@@ -30,9 +30,9 @@ class Counter extends HTMLElement {
       </div>
     `;
 
-    this.shadow.innerHTML = template;
+    this.shadowRoot.innerHTML = template;
 
-    const incrementButton = this.shadow.querySelector('button');
+    const incrementButton = this.shadowRoot.querySelector('button');
     incrementButton.addEventListener('click', () => {
       this._count += 1;
       this.render();
