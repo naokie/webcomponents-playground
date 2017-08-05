@@ -24,7 +24,9 @@ class Counter extends HTMLElement {
       </style>
       <div>${this._count}</div>
       <div>
-        <button>+</button>
+        <button>
+          <slot name="label" />
+        </button>
       </div>
     `;
 
